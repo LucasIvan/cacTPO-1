@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@500&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.ico">
+        <title>Devrel</title>
+    </head>
+    <body>
+        <header id="header"></header>
+        <div class="background-main"><img src="img/image-1.png" alt=""></div>
+
+        <main id="main">
+            <div class="cuerpo" id="main-container">
+                <h2>Un viaje de mil millas comienza con un solo paso</h2>
+                <section class="check-in-container">
+                    <div>
+                        <label for="check-in">CHECK IN</label>
+                        <input type="date" id="check-in" name="check-in">
+                    </div>
+                    <div>
+                        <label for="check-out">CHECK OUT</label>
+                        <input type="date" id="check-out" name="check-out">
+                    </div>
+                    <div>
+                        <label for="people">PERSONAS</label>
+                        <input type="number" id="personas" name="personas" min="1" max="10" value="1">
+                        <button id="sumar">+</button>
+                        <button id="restar">-</button>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!--footer id="fotter" class="footer">
+            <div class="nav-bar">
+                    <nav>
+                        <ul>
+                            <li>Home</li>
+                            <li>Sobre Nosotros</li>
+                            <li>Alojamiento</li>
+                            <li>Contacto</li>
+                        </ul>
+                    </nav>
+                </div>
+        </footer-->
+    </body>
+    <script src="scripts/script-cont.js"></script>
+    <script src="scripts/script.js"></script>
+</html>

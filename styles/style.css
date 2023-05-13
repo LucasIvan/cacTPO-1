@@ -1,0 +1,96 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.background-main>img {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+.cont-header,.logo,.nav-bar,.nav-bar button,.check-in-container {
+    display: flex;
+    align-items: center;
+}
+
+.cont-header {
+    justify-content: space-between;
+    align-items: end;
+    margin: 0 50px;
+}
+
+.logo {
+    font-family: 'Lobster';
+    color: #e6e6e6;
+    font-size: 3em;
+    text-shadow: 1px 1px 3px #000000;
+}
+
+.logo>img {
+    margin-right: 15px;
+}
+
+.nav-bar {
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.nav-bar li {
+    display: inline;
+    margin: 0 0 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #d8d8d8;
+    text-shadow: 0px 1px 2px #000000;
+}
+
+.nav-bar button {
+    font-weight: bold;
+    padding: 10px 15px;
+    margin-left: 40px;
+    border: none;
+    background-color: #FE5303;
+    border-radius: 2em;
+    color: #ffffff;
+}
+
+.cuerpo {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.cuerpo>h2{
+    width: 650px;
+    font-size: 75px;
+    margin: 75px 0;
+    color: #ffffff;
+    font-family: Times;
+    text-shadow: 0px 1px 3px #000000;
+}
+
+.check-in-container{
+    width: 60%;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+.check-in-container>div {
+    padding: 10px 30px;
+}
+
+.check-in-container>div>input {
+    border: none;
+    font-family: 'Montserrat';
+    color: #252525;
+    margin-top: 10px;
+}
+
+.check-in-container label {
+    display: block;
+    font-size: x-small;
+    font-weight: bold;
+    color: #686868;
+}
