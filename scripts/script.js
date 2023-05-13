@@ -4,7 +4,9 @@ document.getElementById("check-out").value = fecha;
 
 function sumarPersona() {
   var input = document.getElementById("personas");
-  input.value = parseInt(input.value)+1;
+  if (input.value < 10) {
+    input.value = parseInt(input.value)+1;
+  }
 }
 
 function restarPersona() {

@@ -9,7 +9,7 @@ body {
     width: 100%;
 }
 
-.cont-header,.logo,.nav-bar,.nav-bar button,.check-in-container {
+.cont-header,.logo,.nav-bar,.nav-bar button,.check-in-container,.check-in-section {
     display: flex;
     align-items: center;
 }
@@ -20,15 +20,11 @@ body {
     margin: 0 50px;
 }
 
-.logo {
+h1>a{
     font-family: 'Lobster';
-    color: #e6e6e6;
+    color: #ffffff;
     font-size: 3em;
     text-shadow: 1px 1px 3px #000000;
-}
-
-.logo>img {
-    margin-right: 15px;
 }
 
 .nav-bar {
@@ -43,7 +39,7 @@ body {
 
 nav a {
     text-decoration: none;
-    color: #d8d8d8;
+    color: #ffffff;
     text-shadow: 0px 1px 2px #000000;
 }
 
@@ -65,20 +61,35 @@ nav a {
 .cuerpo>h2{
     width: 650px;
     font-size: 75px;
-    margin: 75px 0;
+    margin: 13% 0;
     color: #ffffff;
     font-family: Times;
     text-shadow: 0px 1px 3px #000000;
 }
 
+.check-in-section{
+    margin-top: 13%;
+    align-items: center;
+    justify-content: center;
+}
+
 .check-in-container{
-    width: 60%;
+    width: 620px;
     border-radius: 20px;
     background-color: #ffffff;
+    justify-content: center;
 }
 
 .check-in-container>div {
     padding: 10px 30px;
+    margin-right: 20px;
+}
+
+.check-in-container label {
+    display: block;
+    font-size: x-small;
+    font-weight: bold;
+    color: #686868;
 }
 
 .check-in-container>div>input {
@@ -88,9 +99,35 @@ nav a {
     margin-top: 10px;
 }
 
-.check-in-container label {
-    display: block;
-    font-size: x-small;
+.btn-check{
+    width: 30px;
+    height: 20px;
+    border: none;
+    border-radius: 6px;
+    background-color:#dfdfdf;
+    text-align: center;
+    font-family: 'Montserrat';
+}
+
+.btn-buscar{
+    margin: 0 10px;
+    padding: 23px 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: #FE5303;
+    color: #ffffff;
+    font-family: 'Montserrat';
     font-weight: bold;
-    color: #686868;
+    text-shadow: 0 1px 3px #000000;
+}
+
+.nav-bar button:hover, .btn-buscar:hover{
+    background-color: #da4501;
+    cursor: pointer;
+    scale: 1.02;
+}
+
+.nav-bar button:active, .btn-buscar:active{
+    background-color: #FE5303;
+    cursor: pointer;
 }
