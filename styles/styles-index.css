@@ -1,0 +1,87 @@
+html{
+    background-image: url(/TPO/img/image-1.png);
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home>h2{
+    width: 50%;
+    text-align: center;
+    padding: 40px;
+    font-size: 5rem;
+    color: #FE5303;
+    font-family: serif;
+    text-shadow: 4px 4px 5px #000000;
+}
+
+.check-in-section{
+    display: flex;
+    margin-top: 20px;
+}
+
+.check-in-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 620px;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+.check-in-container>div {
+    padding: 10px 30px;
+    margin-right: 20px;
+}
+
+.check-in-container label {
+    display: block;
+    font-size: x-small;
+    font-weight: bold;
+    color: #686868;
+}
+
+.check-in-container>div>input {
+    border: none;
+    font-family: 'Montserrat';
+    color: #252525;
+    margin-top: 10px;
+}
+
+.btn-check{
+    width: 30px;
+    height: 20px;
+    border: none;
+    border-radius: 6px;
+    background-color:#dfdfdf;
+    text-align: center;
+    font-family: 'Montserrat';
+}
+
+.btn-buscar{
+    margin: 0 10px;
+    padding: 23px 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: #FE5303;
+    color: #ffffff;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    text-shadow: 0 1px 3px #000000;
+}
+
+.btn-buscar:hover{
+    background-color: #da4501;
+    cursor: pointer;
+    scale: 1.02;
+}
+
+.btn-buscar:active{
+    background-color: #FE5303;
+    cursor: pointer;
+}
