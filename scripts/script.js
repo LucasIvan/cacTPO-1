@@ -18,3 +18,5 @@ function restarPersona() {
 
 document.getElementById("sumar").addEventListener("click", sumarPersona);
 document.getElementById("restar").addEventListener("click", restarPersona);
+
+

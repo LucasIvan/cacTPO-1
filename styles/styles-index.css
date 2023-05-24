@@ -10,7 +10,7 @@ html{
     align-items: center;
 }
 
-.home>h2{
+.home .tag{
     width: 50%;
     text-align: center;
     padding: 40px;
@@ -20,12 +20,12 @@ html{
     text-shadow: 4px 4px 5px #000000;
 }
 
-.check-in-section{
+.home .check-in-section{
     display: flex;
     margin-top: 20px;
 }
 
-.check-in-container{
+.home .check-in-container{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,36 +34,44 @@ html{
     background-color: #ffffff;
 }
 
-.check-in-container>div {
+.home .check-in-container div {
     padding: 10px 30px;
     margin-right: 20px;
 }
 
-.check-in-container label {
+.home .check-in-container label {
     display: block;
     font-size: x-small;
     font-weight: bold;
     color: #686868;
 }
 
-.check-in-container>div>input {
+.home .check-in-container div input {
     border: none;
     font-family: 'Montserrat';
     color: #252525;
     margin-top: 10px;
 }
 
-.btn-check{
-    width: 30px;
-    height: 20px;
-    border: none;
-    border-radius: 6px;
-    background-color:#dfdfdf;
-    text-align: center;
-    font-family: 'Montserrat';
+.home .personas{
+   width: 15px;
 }
 
-.btn-buscar{
+.home .date-input::-webkit-calendar-picker-indicator {
+    background-image: url('../img/calendar.svg');
+  /* Otros estilos personalizados aquí */
+}
+
+
+.home .btn-check{
+    width: 25px;
+    height: 10px;
+    border: none;
+    border-radius: 6px;
+
+}
+
+.home .btn-buscar{
     margin: 0 10px;
     padding: 23px 30px;
     border: none;
@@ -75,13 +83,13 @@ html{
     text-shadow: 0 1px 3px #000000;
 }
 
-.btn-buscar:hover{
+.home .btn-buscar:hover{
     background-color: #da4501;
     cursor: pointer;
     scale: 1.02;
 }
 
-.btn-buscar:active{
+.home .btn-buscar:active{
     background-color: #FE5303;
     cursor: pointer;
 }

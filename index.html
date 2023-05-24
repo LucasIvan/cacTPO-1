@@ -6,8 +6,10 @@
         <link rel="stylesheet" href="./styles/reset.css">
         <link rel="stylesheet" href="./styles/styles.css">
         <link rel="stylesheet" href="./styles/styles-index.css">
+
+
         <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@500&family=Roboto&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="shortcut icon" href="./img/favicon.ico">
         <title>Devrel</title>
     </head>
     <body class="cuerpo">
@@ -15,22 +17,22 @@
 
         <main class="main">
             <div class="home">
-                <h2>Un viaje de mil millas comienza con un solo paso.</h2>
+                <h2 class="tag">Un viaje de mil millas comienza con un solo paso.</h2>
                 <section class="check-in-section">
                     <div class="check-in-container">
                         <div>
                             <label for="check-in">CHECK IN</label>
-                            <input type="date" id="check-in" name="check-in">
+                            <input type="date" id="check-in" name="check-in" class="date-input">
                         </div>
                         <div>
                             <label for="check-out">CHECK OUT</label>
-                            <input type="date" id="check-out" name="check-out">
+                            <input type="date" id="check-out" name="check-out" class="date-input">
                         </div>
                         <div>
-                            <label for="people">PERSONAS</label>
-                            <input type="number" id="personas" name="personas" min="1" max="10" value="1">
-                            <button class="btn-check" id="sumar">+</button>
-                            <button class="btn-check" id="restar">-</button>
+                            <label for="personas">PERSONAS</label>
+                            <input type="text" id="personas" class="personas" name="personas" min="1" max="10" value="1" readonly>
+                            <img src="./img/plus.svg" alt="" class="btn-check" id="sumar">
+                            <img src="./img/minus.svg" alt="" class="btn-check" id="restar">
                         </div>
                     </div>
                     <button class="btn-buscar">BUSCAR</button>
