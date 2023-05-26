@@ -6,43 +6,29 @@
     padding: 0;
 }
 
-:root{
-    --texto-claro: #FFFFFF;
-}
-
 html{
+    width: 100%;
     height: 100%;
+    user-select: none;
+    scroll-behavior: smooth;
 }
 
-.cuerpo{
+body{
     font-family: 'Montserrat';
     font-size: 1.2rem;
-    display: grid;
-    min-height: 100%;
-    grid-template: 
-        " header    header      header      header      header      header"    110px
-        " .         main        main        main        main        ."
-        " .         footer      footer      footer      footer      ."         80px/
-         50px       auto        auto        auto        auto        50px;
+    background-color: rgb(211, 211, 211);
 }
 
 .header{
     position: fixed;
     width: 100%;
-}
-
-.main{
-    grid-area: main;
-}
-
-.footer{
-    grid-area: footer;
+    z-index: 1;
 }
 
 .cont-header{
     width: 95%;
     margin: 10px auto;
-    padding: 10px 50px;
+    padding: 10px 25px;
     border-radius: 100px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4 );
     background-color: rgba(168, 168, 168, 0.35);
@@ -54,9 +40,9 @@ html{
     justify-content: space-between;
 }
 
-.titulo>a{
+.titulo a{
     font-family: 'Lobster';
-    color: var(--texto-claro);
+    color: #FFFFFF;
     font-size: 3rem;
     text-shadow: 1px 1px 5px #000000;
     text-decoration: none;
@@ -70,28 +56,50 @@ html{
 
 .nav-bar a {
     text-decoration: none;
-    color: var(--texto-claro);
+    color: #FFFFFF;
     text-shadow: 0 1px 5px #000000;
 }
 
-.nav-bar button {
-    font-weight: bold;
-    padding: 10px 15px;
+.nav-bar .btn-reservaciones {
+    padding: 10px 20px;
     margin-left: 40px;
     border: none;
     background-color: #FE5303;
     border-radius: 2em;
-    color: var(--texto-claro);
+    font-weight: bold;
+    color: #FFFFFF;
     box-shadow: 0 1px 5px #000000;
+    text-shadow: 0 1px 3px #000000;
 }
 
-.nav-bar button:hover, .btn-buscar:hover{
+.nav-bar .btn-reservaciones:hover, .btn-buscar:hover{
     background-color: #da4501;
     cursor: pointer;
     scale: 1.02;
 }
 
-.nav-bar button:active, .btn-buscar:active{
+.nav-bar .btn-reservaciones:active, .btn-buscar:active{
     background-color: #FE5303;
     cursor: pointer;
+    scale: 1;
+}
+
+.fondo {
+    max-width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.home, .cont-nosotros, .cont-alojamiento, .cont-testimoniales {
+  padding: 0 60px;
+  margin-bottom: 80px;
+}
+
+
+h2{
+  font-size: 1.1rem;
+  color: #646464;
+  margin-bottom: 80px;
 }

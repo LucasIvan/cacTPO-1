@@ -1,24 +1,17 @@
-body{
-    background-color: rgb(211, 211, 211);
-}
-
 .nosotros{
     width: 100%;
-    min-height: 100%;
     display: flex;
-    justify-content: center;
-    margin: 10% 2%;
+    justify-content: space-between;
     color: black;
 }
 
 .columna1, .columna2{
-    width: 40%;
-    padding: 0 40px;
     display: flex;
     flex-direction: column;
+    width: 45%;
 }
 
-.columna1>h3{
+.columna1 h3{
     font-family: serif;
     font-size: 4rem;
     color: #FE5303;
@@ -26,7 +19,7 @@ body{
     margin-bottom: 30px;
 }
 
-.columna1>p, .columna2>p{
+.columna1 p, .columna2 p{
     font-size: 1.2rem;
     margin: 4rem 0;
     padding: 10px;
@@ -34,9 +27,9 @@ body{
     line-height: 2;
 }
 
-.columna1>img, .columna2>img{
+.columna1 img, .columna2 img{
     border-radius: 2rem;
-    width: 100%;
+
     box-shadow: 3px 3px 10px #000000;
 }
 

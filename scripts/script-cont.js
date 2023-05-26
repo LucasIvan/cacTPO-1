@@ -1,17 +1,18 @@
 const encabezado = `
 <div class="cont-header">
     <div class="logo">
-        <h1 class="titulo"><a href="index.html">Devrel</a></h1>
+        <h1 class="titulo"><a href="#home" class="enlace-ancla">Devrel</a></h1>
     </div>
     <div class="nav-bar">
         <nav>
             <ul>
-                <li><a href="./alojamiento.html">ALOJAMIENTO</a></li>
-                <li><a href="./nosotros.html">NOSOTROS</a></li>
-                <li><a href="./contacto.html">CONTACTO</a></li>
+                <li><a href="#nosotros" class="enlace-ancla">NOSOTROS</a></li>
+                <li><a href="#alojamiento" class="enlace-ancla">ALOJAMIENTO</a></li>
             </ul>
         </nav>
-        <button>RESERVACIONES</button>
+        <div class="btn-reservaciones">
+            <span class="btn-text">RESERVAS</span>
+        </div>
     </div>
 </div>
 `;

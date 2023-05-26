@@ -1,15 +1,88 @@
-/* Estilos para el formulario de contacto */
-body {
-    background-color: rgb(211, 211, 211);
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@500&family=Roboto&display=swap');
+
+.hidden {
+    display: none;
+}
+
+.btn-contacto {
+    position: fixed;
+    display: flex;
+    bottom: 50px;
+    right: 60px;
+    color: #ffffff;
+    z-index: 9999;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-contacto.hidden {
+  display: none;
+}
+
+.btn-contacto .cont-btn-img {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #FE5303;
+    width: 40px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    background-image: url(../img/mensaje.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+}
+
+.btn-contacto .btn-text {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 0.9rem;
+    margin-right: 7px;
+    text-shadow: 1px 1px 3px #000000;
+}
+
+.btn-contacto .btn-icon {
+    width: 20px;
+}
+
+.btn-contacto .cont-btn-img:hover {
+    display: inline;
+    background-color: #da4501;
+    cursor: pointer;
+    scale: 1.03;
+}
+
+.btn-contacto:hover .btn-text {
+    opacity: 1;
+}
+
+.btn-contacto .cont-btn-img:active {
+    background-color: #FE5303;
+    cursor: pointer;
+    scale: 1;
 }
 
 .cont-form {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 0.5s;
     min-width: 400px;
     max-width: 400px;
     margin: 0 auto;
+    position: fixed;
+    bottom: 50px;
+    right: 60px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 2rem;
+    box-shadow: 1px 1px 5px #000000;
 }
 
-.titulo-formulario{
+.cont-form.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.titulo-formulario {
     margin-bottom: 25px;
     text-align: center;
     color: #FE5303;
@@ -20,7 +93,7 @@ body {
     margin-bottom: 35px;
 }
 
-.campo label{
+.campo label {
     position: absolute;
     top: 13px;
     left: 20px;
@@ -28,6 +101,10 @@ body {
     color: #888;
     transition: 0.2s;
     transform-origin: left top;
+}
+
+.campo label:hover{
+    cursor: text;
 }
 
 .cont-form input,
@@ -39,12 +116,22 @@ body {
     outline: none;
     border-radius: 2rem;
     border: 1px solid #ccc;
+    font-family: 'Montserrat';
+}
+.cont-form textarea{
+    padding: 20px 20px;
 }
 
 .cont-form input:focus,
 .cont-form textarea:focus {
     border-bottom-color: #FE5303;
     outline: none;
+}
+
+.cont-form label.filled {
+  top: -15px;
+  font-size: 0.75rem;
+  color: #FE5303;
 }
 
 .cont-form input:focus+label,
@@ -56,13 +143,19 @@ body {
 
 .telefono {
     display: flex;
+    margin-top: -20px;
 }
 
-.telefono label{
+.telefono label {
     left: 90px;
 }
 
-.telefono input:focus+label{
+.telefono label.filled {
+    top: -15px;
+    left: 25px;
+}
+
+.telefono input:focus+label {
     top: -15px;
     left: 25px;
 }
@@ -73,8 +166,13 @@ body {
     border-radius: 2rem 0 0 2rem;
     border: 1px solid #ccc;
     border-right: none;
-    background-color: #f5f5f5;
+    background-color: #FFFFFF;
     color: #666;
+    outline: none;
+}
+
+.cont-form select:focus {
+    border-bottom-color: #FE5303;
 }
 
 .cont-form input[name="telefono"] {
@@ -84,7 +182,7 @@ body {
     border-left: none;
 }
 
-.cont-form textarea{
+.cont-form textarea {
     resize: none;
     height: 150px;
 }
@@ -93,7 +191,7 @@ body {
     top: -15px;
 }
 
-.cont-form button.btn {
+.cont-form .btn-eviar {
     display: block;
     width: 100%;
     padding: 10px;
@@ -102,11 +200,63 @@ body {
     border: none;
     border-radius: 2rem;
     cursor: pointer;
+    font-size: 1rem;
 }
 
-.cont-form button.btn:hover {
+.cont-form .btn-eviar:hover {
     background-color: #da4501;
     cursor: pointer;
     scale: 1.02;
 }
+
+.cont-form .btn-eviar:active{
+    scale: 1;
+    background-color: #FE5303;
+}
+
+.cont-form .error {
+  visibility: hidden;
+  color: red;
+  font-size: 0.75rem;
+  display: flex;
+  width: 95%;
+  align-items: center;
+  justify-content: end;
+  margin-top: 5px;
+}
+
+.cont-form .error img{
+    margin-right: 8px;
+}
+
+/**--------------------------------*/
+
+.cont-alertas {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.cont-alertas .mensaje-exito,
+.cont-alertas .mensaje-error {
+    padding: 10px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+}
+
+.cont-alertas .mensaje-exito {
+    background-color: green;
+}
+
+.cont-alertas .mensaje-error {
+    background-color: red;
+}
+
 

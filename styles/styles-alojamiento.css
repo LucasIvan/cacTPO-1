@@ -1,23 +1,20 @@
-body{
-    background-color: rgb(211, 211, 211);
-}
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@500&family=Roboto&display=swap');
 
 .encabezado-alojamiento{
   display: flex;
   justify-content: space-between;
   align-items: end;
-  padding: 0 50px;
   margin-bottom: 30px;
 }
 
-.encabezado-alojamiento>h3{
+.encabezado-alojamiento h3, .cont-testimoniales h3{
   font-family: serif;
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   color: #FE5303;
   text-shadow: 2px 1px 2px #646464;
 }
 
-.encabezado-alojamiento>p>a{
+.encabezado-alojamiento p a{
   text-decoration: none;
   color: #FFFFFF;
   text-shadow: 2px 1px 2px #000000;
@@ -26,26 +23,112 @@ body{
 
 .alojamiento{
   display: grid;
-  gap: 50px;
+  gap: 15px 50px;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 0 30px;
 }
 
 .alojamiento img{
   width: 100%;
-  height: 100%;
+  height: 90%;
   border-radius: 2rem;
   box-shadow: 3px 3px 10px #000000;
 }
 
-.img1 {
+.alojamiento .img:hover{
+  scale: 1.02;
+  cursor: pointer;
+}
+
+.alojamiento .img:active{
+  scale: 1;
+  cursor: pointer;
+}
+
+.alojamiento div:first-child {
   grid-column-start: 1;
   grid-column-end: 3;
 }
 
-.alojamiento>div>p{
+.alojamiento .descripcion{
   position: relative;
-  transform: translate(5%, -400%);
+  transform: translate(8%, -150%);
   color: #FFFFFF;
+  text-shadow: 1px 1px 5px #000000;
+}
+
+.alojamiento .descripcion h5{
+  font-family: serif;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
   text-shadow: 1px 1px 3px #000000;
+}
+
+.alojamiento .descripcion .precio{
+  display: inline;
+  margin-right: 15px;
+  font-size: 1.5rem;
+}
+
+.alojamiento .descripcion .desc{
+  display: inline;
+  margin-right: 15px;
+  font-size: 0.8rem;
+}
+
+.cont-testimoniales{
+  width: 100%;
+  margin: 40px 0;
+}
+
+.cont-testimoniales .tarjetas{
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.cont-testimoniales .tarjeta{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+  padding: 50px;
+  background-color: #ebebeb;
+  border-radius: 2rem;
+  box-shadow: 1px 1px 3px #000000;
+  
+}
+
+.cont-testimoniales .titulo{
+  font-size: 1.6rem;
+  font-family: serif;
+  margin-bottom: 40px;
+}
+
+.cont-testimoniales .detalle{
+  font-size: 0.95rem;
+  text-align: justify;
+  line-height: 2;
+  color: #303030;
+}
+
+.cont-testimoniales .usuario{
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.cont-testimoniales .usuario .avatar{
+  width: 70px;
+  height: 70px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-size: cover;
+  margin-right: 30px;
+}
+
+.cont-testimoniales .usuario p{
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #646464;
 }

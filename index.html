@@ -5,18 +5,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./styles/reset.css">
         <link rel="stylesheet" href="./styles/styles.css">
-        <link rel="stylesheet" href="./styles/styles-index.css">
-
-
-        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@500&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/styles-home.css">
+        <link rel="stylesheet" href="./styles/styles-nosotros.css">
+        <link rel="stylesheet" href="./styles/styles-alojamiento.css">
+        <link rel="stylesheet" href="./styles/styles-contacto.css">
         <link rel="shortcut icon" href="./img/favicon.ico">
         <title>Devrel</title>
     </head>
-    <body class="cuerpo">
+    <body>
         <header class="header"></header>
-
+        
         <main class="main">
-            <div class="home">
+
+            <div class="fondo">
+                <img src="./img/image-1.png" alt="">
+            </div>
+
+            <div class="home" id="home">
                 <h2 class="tag">Un viaje de mil millas comienza con un solo paso.</h2>
                 <section class="check-in-section">
                     <div class="check-in-container">
@@ -38,23 +43,187 @@
                     <button class="btn-buscar">BUSCAR</button>
                 </section>
             </div>
+
+            <div class="cont-nosotros" id="nosotros">
+                    <h2 class="titulo-nosotros">Nosotros</h2>
+                <div class="nosotros">
+                    <div class="columna1">
+                        <h3>El mundo es un libro y aquellos que no viajan solo leen una página.</h3>
+                        <p>Nacimos en 2009 con el sueño de hacer los viajes accesibles a todos, ofrecer las mejores ofertas y una atención personalizada para armar vacaciones a tu medida. </p>
+                        <img src="./img/image-2.png" alt="">
+                    </div>
+                    <div class="columna2">
+                        <img src="./img/image-3.png" alt="">
+                        <p>Fuimos creciendo y ese sueño se volvió realidad: te dimos la oportunidad de comparar, de volar a destinos de todo el mundo por el precio más bajo, con una experiencia de compra rápida, segura y fácil.</p>
+                        <p>"Viajar es la única cosa que compras que te hace más rico"</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cont-alojamiento" id="alojamiento">
+                <h2>Alojamiento</h2>
+                <div class="encabezado-alojamiento">
+                    <h3>Habitaciones / Suites</h3>
+                    <p><a href="#">ver todo →</a></p>
+                </div>
+
+                <div class="alojamiento">
+                    <div class="img">
+                        <img src="./img/stay-1.png" alt="">
+                        <div class="descripcion">
+                            <h5>Vista al Mar</h5>
+                            <p class="precio">$580</p>
+                            <p class="desc">noche</p>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <img src="./img/stay-2.png" alt="">
+                        <div class="descripcion">
+                            <h5>Casa</h5>
+                            <p class="precio">$400</p>
+                            <p class="desc">noche</p>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <img src="./img/stay-3.png" alt="">
+                        <div class="descripcion">
+                            <h5>Minimalista</h5>
+                            <p class="precio">$150</p>
+                            <p class="desc">noche</p>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <img src="./img/stay-4.png" alt="">
+                        <div class="descripcion">
+                            <h5>Rústico</h5>
+                            <p class="precio">$200</p>
+                            <p class="desc">noche</p>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <img src="./img/stay-5.png" alt="">
+                        <div class="descripcion">
+                            <h5>Moderno</h5>
+                            <p class="precio">$345</p>
+                            <p class="desc">noche</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cont-testimoniales" id="testimoniales">
+                <h2>Testimoniales</h2>
+                <h3>Lo que dicen nuestros clientes.</h3>
+                <div id="tarjetas-container" class="tarjetas">
+                    <div class="tarjeta">
+                        <div class="texto">
+                            <p class="titulo">Gran Estadía!</p>
+                            <p class="detalle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt cum dolorem repellendus. Libero ipsam recusandae quas molestias vel velit maxime quos incidunt tempora. Quae, reprehenderit.</p>
+                        </div>
+                        <div class="usuario">
+                            <div class="avatar"></div>
+                            <div class="tag">
+                                <div class="nombre"></div>
+                                <p>de</p>
+                                <p class="pais"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tarjeta">
+                        <div class="texto">
+                            <p class="titulo">La pasé Genial!</p>
+                            <p class="detalle">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et facilis hic debitis quaerat aspernatur ad vero, dolor ipsam! Impedit dolore aut ullam enim ipsa voluptatem?</p>
+                        </div>
+                        <div class="usuario">
+                            <div class="avatar"></div>
+                            <div class="tag">
+                                <div class="nombre"></div>
+                                <p>de</p>
+                                <p class="pais"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tarjeta">
+                        <div class="texto">
+                            <p class="titulo">Espero Volver!</p>
+                            <p class="detalle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam debitis quis perferendis modi maxime delectus autem omnis, neque placeat amet, quam ut beatae quae explicabo!</p>
+                        </div>
+                        <div class="usuario">
+                            <div class="avatar"></div>
+                            <div>
+                                <div class="tag">
+                                    <div class="nombre"></div>
+                                    <p>de</p>
+                                    <p class="pais"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-contacto" id="btn-contacto">
+                <span class="btn-text">CONTACTO</span>
+                <div class="cont-btn-img"></div>
+            </div>
+
+            <div class="cont-form" id="formulario">
+                <h3 class="titulo-formulario">Envíanos un mensaje</h3>
+                <form action="#" id="form-id">
+                    <div class="campo">
+                        <input type="text" id="nombre" name="nombre" title="Ingrese su nombre">
+                        <label for="nombre">Nombre</label>
+                    </div>
+                    <div class="campo">
+                        <input type="email" id="email" name="email" class="email" title="Ingrese su email">
+                        <label for="email">Correo electrónico</label>
+                        <span id="email-error" class="error"><img src="./img/exclamation-red.png" width="16px" alt=""> Ingrese un correo electrónico válido</span>
+                    </div>
+                    <div class="campo">
+                        <div class="telefono">
+                            <select id="codigo-pais" class="codigo-pais" name="codigo-pais">
+                                <option value="+1">+1</option>
+                                <option value="+52">+52</option>
+                                <option value="+52">+54</option>
+                                <option value="+34">+34</option>
+                                <!-- Agregar más -->
+                            </select>
+                            <input type="text" id="telefono" name="telefono" class="tele-input" title="Ingrese su numero telefónico">
+                            <label for="telefono">Teléfono</label>
+                        </div>
+                    </div>
+                    <div class="campo">
+                        <textarea id="mensaje" name="mensaje" title="Por favor, complete el mensaje"></textarea>
+                        <label for="mensaje">Mensaje</label>
+                    </div>
+                    <input type="submit" class="btn-eviar"></input>
+                </form>
+            </div>
+
+            <div class="cont-alertas">
+                <div id="mensaje-exito" class="mensaje-exito">
+                    <span id="mensaje-exito-texto"></span>
+                </div>
+                <div id="mensaje-error" class="mensaje-error">
+                    <span id="mensaje-error-texto"></span>
+                </div>
+            </div>
+
         </main>
  
-        <footer class="footer"></footer>
-     <!--footer id="fotter" class="footer">
-                <div class="nav-bar">
-                        <nav>
-                            <ul>
-                                <li>Home</li>
-                                <li>Sobre Nosotros</li>
-                                <li>Alojamiento</li>
-                                <li>Contacto</li>
-                            </ul>
-                        </nav>
-                    </div>
-        </footer-->
-        <script src="scripts/script-cont.js"></script>
-        <script src="scripts/script.js"></script>
+        <footer class="footer">
+            <div>
+                <p>extras, redes y links</p>
+                <p>&copy Copyright 2023 Todos los Derechos Reservados</p>
+            </div>
+            
+            <div class="copy">
+                <p>Desarrolado por Lucas Molina - Trabajo Práctico - Programa Codo A Codo 2023</p>
+            </div>
+        </footer>
+
+        <script src="./scripts/script-cont.js"></script>
+        <script src="./scripts/script.js"></script>
     </body>
 
 </html>
