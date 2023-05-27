@@ -78,20 +78,36 @@
 .cont-testimoniales{
   width: 100%;
   margin: 40px 0;
+  overflow: hidden;
 }
 
-.cont-testimoniales .tarjetas{
-  display: flex;
-  justify-content: space-between;
+.cont-testimoniales .tarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+  max-height: 550px;
+  padding: 2px;
   margin: 30px 0;
+  overflow: hidden;
+}
+
+.cont-testimoniales .tarjeta {
+  transition: transform 2s ease-in-out, opacity 0.7s ease-in-out;
+}
+
+.cont-testimoniales .tarjeta.secondary {
+  opacity: 0;
 }
 
 .cont-testimoniales .tarjeta{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 30%;
+  min-width: 300px;
+  max-width: 350px;
+  height: 500px;
   padding: 50px;
+  margin-bottom: 40px;
   background-color: #ebebeb;
   border-radius: 2rem;
   box-shadow: 1px 1px 3px #000000;
@@ -105,7 +121,7 @@
 }
 
 .cont-testimoniales .detalle{
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   text-align: justify;
   line-height: 2;
   color: #303030;

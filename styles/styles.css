@@ -22,7 +22,7 @@ body{
 .header{
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 999;
 }
 
 .cont-header{
@@ -102,4 +102,132 @@ h2{
   font-size: 1.1rem;
   color: #646464;
   margin-bottom: 80px;
+}
+
+.btn-scroll {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    color: #ffffff;
+    z-index: 9999;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-scroll.show {
+  display: flex;
+}
+
+.btn-scroll .cont-btn-scroll-img {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #c2c2c2;
+    width: 40px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    background-image: url(../img/up-arrow-orange.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+}
+
+.btn-scroll .btn-scroll-text {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 0.9rem;
+    margin-right: 7px;
+    text-shadow: 1px 1px 3px #000000;
+}
+
+.btn-scroll .btn-icon {
+    width: 20px;
+}
+
+.btn-scroll .cont-btn-scroll-img:hover {
+    display: inline;
+    background-color: #9e9e9e;
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.btn-scroll:hover .btn-scroll-text {
+    opacity: 1;
+}
+
+.btn-scroll .cont-btn-scroll-img:active {
+    background-color: #c2c2c2;
+    cursor: pointer;
+    scale: 1;
+}
+/**--------------------------------------*/
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0 10px;
+}
+
+.footer-cont {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 0 55px;
+}
+
+.footer-section h3 {
+  font-size: 1.6rem;
+  color: #FE5303;
+  font-family: serif;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  margin-bottom: 10px;
+  font-size: 0.75rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-media-icons a {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  background-color: #222;
+  padding: 10px 0;
+  margin: 10px 0;
+  text-align: center;
+  font-size: 0.87rem;
+}
+
+.copy{
+    padding: 15px;
+    text-align: center;
+}
+
+.copy p{
+    margin-top: 10px;
+    font-size: 0.8rem;
 }

@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="./styles/styles-nosotros.css">
         <link rel="stylesheet" href="./styles/styles-alojamiento.css">
         <link rel="stylesheet" href="./styles/styles-contacto.css">
+        <link rel="stylesheet" href="./styles/styles-carrousel-vids.css">
         <link rel="shortcut icon" href="./img/favicon.ico">
         <title>Devrel</title>
     </head>
@@ -21,7 +22,7 @@
                 <img src="./img/image-1.png" alt="">
             </div>
 
-            <div class="home" id="home">
+            <section class="home" id="home">
                 <h2 class="tag">Un viaje de mil millas comienza con un solo paso.</h2>
                 <section class="check-in-section">
                     <div class="check-in-container">
@@ -42,9 +43,9 @@
                     </div>
                     <button class="btn-buscar">BUSCAR</button>
                 </section>
-            </div>
+            </section>
 
-            <div class="cont-nosotros" id="nosotros">
+            <section class="cont-nosotros" id="nosotros">
                     <h2 class="titulo-nosotros">Nosotros</h2>
                 <div class="nosotros">
                     <div class="columna1">
@@ -58,9 +59,9 @@
                         <p>"Viajar es la única cosa que compras que te hace más rico"</p>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="cont-alojamiento" id="alojamiento">
+            <section class="cont-alojamiento" id="alojamiento">
                 <h2>Alojamiento</h2>
                 <div class="encabezado-alojamiento">
                     <h3>Habitaciones / Suites</h3>
@@ -109,9 +110,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="cont-testimoniales" id="testimoniales">
+            <section class="cont-testimoniales" id="testimoniales">
                 <h2>Testimoniales</h2>
                 <h3>Lo que dicen nuestros clientes.</h3>
                 <div id="tarjetas-container" class="tarjetas">
@@ -159,15 +160,63 @@
                             </div>
                         </div>
                     </div>
+                    <div class="tarjeta">
+                        <div class="texto">
+                            <p class="titulo">Experiencia Unica!</p>
+                            <p class="detalle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam debitis quis perferendis modi maxime delectus autem omnis, neque placeat amet, quam ut beatae quae explicabo!</p>
+                        </div>
+                        <div class="usuario">
+                            <div class="avatar"></div>
+                            <div>
+                                <div class="tag">
+                                    <div class="nombre"></div>
+                                    <p>de</p>
+                                    <p class="pais"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tarjeta">
+                        <div class="texto">
+                            <p class="titulo">Viaje Muy Divertido!</p>
+                            <p class="detalle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam debitis quis perferendis modi maxime delectus autem omnis, neque placeat amet, quam ut beatae quae explicabo!</p>
+                        </div>
+                        <div class="usuario">
+                            <div class="avatar"></div>
+                            <div>
+                                <div class="tag">
+                                    <div class="nombre"></div>
+                                    <p>de</p>
+                                    <p class="pais"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tarjeta">
+                        <div class="texto">
+                            <p class="titulo">Sin Dudas Volveré!</p>
+                            <p class="detalle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam debitis quis perferendis modi maxime delectus autem omnis, neque placeat amet, quam ut beatae quae explicabo!</p>
+                        </div>
+                        <div class="usuario">
+                            <div class="avatar"></div>
+                            <div>
+                                <div class="tag">
+                                    <div class="nombre"></div>
+                                    <p>de</p>
+                                    <p class="pais"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
 
             <div class="btn-contacto" id="btn-contacto">
                 <span class="btn-text">CONTACTO</span>
                 <div class="cont-btn-img"></div>
             </div>
 
-            <div class="cont-form" id="formulario">
+            <section class="cont-form" id="formulario">
                 <h3 class="titulo-formulario">Envíanos un mensaje</h3>
                 <form action="#" id="form-id">
                     <div class="campo">
@@ -198,6 +247,11 @@
                     </div>
                     <input type="submit" class="btn-eviar"></input>
                 </form>
+            </section>
+
+            <div class="btn-scroll" id="btn-scroll">
+                <span class="btn-scroll-text">Ir Arriba</span>
+                <div class="cont-btn-scroll-img"></div>
             </div>
 
             <div class="cont-alertas">
@@ -209,16 +263,53 @@
                 </div>
             </div>
 
+            <div class="cont-videos">
+                <div class="carouse-videos-container">
+                    <div id="player1"></div>
+                    <div id="player2"></div>
+                </div>
+            </div>
+
         </main>
  
         <footer class="footer">
-            <div>
-                <p>extras, redes y links</p>
-                <p>&copy Copyright 2023 Todos los Derechos Reservados</p>
+            <div class="footer-cont">
+                <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Dirección: 123 Calle Principal, Ciudad</p>
+                <p>Teléfono: +1234567890</p>
+                <p>Email: info@agenciadeviajes.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces útiles</h3>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Destinos</a></li>
+                        <li><a href="#">Tours</a></li>
+                        <li><a href="#">Promociones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos en redes sociales</h3>
+                    <div class="social-media-icons">
+                        <a href=""><img src="./img/facebook.png" alt="" width="25px"><i class="facebook"></i></a>
+                        <a href=""><img src="./img/twitter.png" alt="" width="25px"><i class="twitter"></i></a>
+                        <a href=""><img src="./img/instagram.png" alt="" width="25px"><i class="instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Agencia de Viajes. Todos los derechos reservados.</p>
             </div>
             
+            
             <div class="copy">
-                <p>Desarrolado por Lucas Molina - Trabajo Práctico - Programa Codo A Codo 2023</p>
+                <div class="social-media-icons">
+                        <a href="https://www.instagram.com/lucasivanmolina/"><img src="./img/instagram.png" alt="" width="25px"><i class="instagram"></i></a>
+                        <a href="https://github.com/LucasIvan"><img src="./img/github.png" alt="" width="25px"><i class="facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/lucas-molina-dev/"><img src="./img/linkedin.png" alt="" width="25px"><i class="twitter"></i></a>
+                    </div>
+                <p>Lucas Molina - Trabajo Práctico Desarrollo Web - Programa Codo A Codo 2023</p>
             </div>
         </footer>
 

@@ -67,14 +67,16 @@ function scrollToSmoothly(posicion, duracion) {
 
 //--------------------------------------------------------------------------------------------------------
 //---------------------------------------- Random User API -----------------------------------------------
-
 var tarjetasContainer = document.querySelector('.tarjetas');
+var tarjetas = tarjetasContainer.querySelectorAll('.tarjeta');
+var tarjetasCount = tarjetas.length;
+var currentIndex = 0;
 
-fetch('https://randomuser.me/api/?results=3')
+fetch('https://randomuser.me/api/?results=6')
   .then(response => response.json())
   .then(data => {
     data.results.forEach((user, index) => {
-      var tarjeta = tarjetasContainer.querySelectorAll('.tarjeta')[index];
+      var tarjeta = tarjetas[index];
       var avatar = tarjeta.querySelector('.avatar');
       avatar.style.backgroundImage = `url(${user.picture.medium})`;
       var nombre = tarjeta.querySelector('.nombre');
@@ -82,10 +84,35 @@ fetch('https://randomuser.me/api/?results=3')
       var pais = tarjeta.querySelector('.pais');
       pais.textContent = user.location.country;
     });
+
+    setInterval(() => {
+      var currentTarjeta = tarjetas[currentIndex];
+      var nextIndex = (currentIndex + 1) % tarjetasCount;
+      var nextTarjeta = tarjetas[nextIndex];
+
+      nextTarjeta.style.opacity = '0';
+
+      currentTarjeta.style.transform = 'translateX(-100%)';
+      nextTarjeta.style.transform = 'translateX(0)';
+
+      setTimeout(() => {
+        tarjetasContainer.appendChild(currentTarjeta);
+        currentTarjeta.style.transform = 'none';
+
+        setTimeout(() => {
+          currentTarjeta.style.opacity = '1';
+          nextTarjeta.style.opacity = '1';
+        }, 40);
+
+        currentIndex = nextIndex;
+      }, 400);
+    }, 5000);
   })
   .catch(error => {
     console.log('Error al obtener los datos de la API:', error);
   });
+
+
 
 //--------------------------------------------------------------------------------------------------------
 //--------------------------------------- Mostrar Formulario ---------------------------------------------
@@ -185,7 +212,6 @@ emailInput.addEventListener('input', function (event) {
 //--------------------------------------------------------------------------------------------------------
 //----------------------------------- Validación del Formulario ------------------------------------------
 
-
   const form = document.getElementById('form-id');
   const mensajeExito = document.getElementById('mensaje-exito');
   const mensajeExitoTexto = document.getElementById('mensaje-exito-texto');
@@ -256,3 +282,142 @@ function mostrarMensajeExito(mensaje) {
     return emailRegex.test(email);
   }
 
+//--------------------------------------------------------------------------------------------------------
+//---------------------------------------- BOTON DE SCROLL -----------------------------------------------
+
+window.addEventListener('scroll', function() {
+  var btnScroll = document.getElementById('btn-scroll');
+  if (window.pageYOffset > 300) {
+    btnScroll.classList.add('show');
+  } else {
+    btnScroll.classList.remove('show');
+  }
+});
+
+
+document.getElementById('btn-scroll').addEventListener('click', function() {
+  const scrollToTop = () => {
+    if (window.scrollY !== 0) {
+      window.scrollBy(0, -180);
+      requestAnimationFrame(scrollToTop);
+    }
+  };
+  
+  scrollToTop();
+});
+
+//--------------------------------------------------------------------------------------------------------
+//--------------------------------------- CARROUSEL VIDEOS -----------------------------------------------
+/*
+function loadYouTubeAPI() {
+  const tag = document.createElement('script');
+  tag.src = 'https://www.youtube.com/iframe_api';
+  const firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+}
+
+let player1, player2;
+
+function createYouTubePlayers() {
+  player1 = new YT.Player('player1', {
+    videoId: '6stlCkUDG_s',
+    events: {
+      'onStateChange': onPlayerStateChange1
+    }
+  });
+
+  player2 = new YT.Player('player2', {
+    videoId: 'ZjbFDYoE-OY',
+    events: {
+      'onStateChange': onPlayerStateChange2
+    }
+  });
+}
+
+function onPlayerStateChange1(event) {
+  if (event.data === YT.PlayerState.ENDED) {
+    player1.setOpacity(0);
+    player2.setOpacity(1);
+    player2.playVideo();
+  }
+}
+
+function onPlayerStateChange2(event) {
+  if (event.data === YT.PlayerState.ENDED) {
+    player1.setOpacity(1);
+    player2.setOpacity(0);
+    player1.playVideo();
+  }
+}
+
+window.onYouTubeIframeAPIReady = createYouTubePlayers;
+loadYouTubeAPI();
+
+*/
+//-----------------------------------------------------
+
+// Cargar la API de YouTube
+function loadYouTubeAPI() {
+  const tag = document.createElement('script');
+  tag.src = 'https://www.youtube.com/iframe_api';
+  const firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+}
+
+let player1, player2;
+
+// Crear los reproductores de YouTube
+function createYouTubePlayers() {
+  player1 = new YT.Player('player1', {
+    videoId: 'ZjbFDYoE-OY',
+    playerVars: {
+      autoplay: 1,
+      controls: 0,
+      disablekb: 1,
+      modestbranding: 1,
+      playsinline: 1,
+      loop: 1,
+      playlist: 'ZjbFDYoE-OY'
+    },
+    events: {
+      'onStateChange': onPlayerStateChange1
+    }
+  });
+
+  player2 = new YT.Player('player2', {
+    videoId: '6stlCkUDG_s',
+    playerVars: {
+      autoplay: 1,
+      controls: 0,
+      disablekb: 1,
+      modestbranding: 1,
+      playsinline: 1,
+      loop: 1,
+      playlist: '6stlCkUDG_s'
+    },
+    events: {
+      'onStateChange': onPlayerStateChange2
+    }
+  });
+}
+
+function onPlayerStateChange1(event) {
+  if (event.data === YT.PlayerState.ENDED) {
+    player1.stopVideo();
+    player1.clearVideo();
+    player1.loadVideoById('ZjbFDYoE-OY');
+    player1.playVideo();
+  }
+}
+
+function onPlayerStateChange2(event) {
+  if (event.data === YT.PlayerState.ENDED) {
+    player2.stopVideo();
+    player2.clearVideo();
+    player2.loadVideoById('6stlCkUDG_s');
+    player2.playVideo();
+  }
+}
+
+window.onYouTubeIframeAPIReady = createYouTubePlayers;
+loadYouTubeAPI();
