@@ -14,12 +14,3 @@ Desarrollo Frontend de una web de agencia de viajes destinada para el Trabajo Pr
 <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/css3/css3-original.svg" alt="" width="40px" style="margin-right: 20px">
 <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/javascript/javascript-original.svg" alt="" width="40px">
 </div>
-<br>
-<br>
-<br>
-<br>
-<div style="display:flex; width: 100%; justify-content: center">
-
-![GitHub watchers](https://img.shields.io/github/watchers/LucasIvan/cacTPO-1?color=green&label=visitas&logo=github)
-
-</div>
