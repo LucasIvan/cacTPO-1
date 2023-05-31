@@ -4,12 +4,12 @@
   display: flex;
   justify-content: space-between;
   align-items: end;
-  margin-bottom: 30px;
+  margin-bottom: 2vw;
 }
 
 .encabezado-alojamiento h3, .cont-testimoniales h3{
   font-family: serif;
-  font-size: 2.3rem;
+  font-size: 4vw;
   color: #FE5303;
   text-shadow: 2px 1px 2px #646464;
 }
@@ -18,19 +18,19 @@
   text-decoration: none;
   color: #FFFFFF;
   text-shadow: 2px 1px 2px #000000;
-  font-size: smaller;
+  font-size: 1.3vw;
 }
 
 .alojamiento{
   display: grid;
-  gap: 15px 50px;
+  gap: 1vw 5vw;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
 .alojamiento img{
   width: 100%;
   height: 90%;
-  border-radius: 2rem;
+  border-radius: 2vw;
   box-shadow: 3px 3px 10px #000000;
 }
 
@@ -58,7 +58,7 @@
 
 .alojamiento .descripcion h5{
   font-family: serif;
-  font-size: 2.2rem;
+  font-size: 2.6vw;
   margin-bottom: 20px;
   text-shadow: 1px 1px 3px #000000;
 }
@@ -66,13 +66,13 @@
 .alojamiento .descripcion .precio{
   display: inline;
   margin-right: 15px;
-  font-size: 1.5rem;
+  font-size: 1.8vw;
 }
 
 .alojamiento .descripcion .desc{
   display: inline;
   margin-right: 15px;
-  font-size: 0.8rem;
+  font-size: 1vw;
 }
 
 .cont-testimoniales{
@@ -84,11 +84,26 @@
 .cont-testimoniales .tarjetas {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 45px;
+  gap: 1vw;
   max-height: 550px;
-  padding: 2px;
-  margin: 30px 0;
+  padding: 1.5vw 5vw;
   overflow: hidden;
+}
+
+@media (max-width: 1100px){
+  .cont-testimoniales .tarjetas {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6vw;
+    max-height: 600px;
+  }
+}
+
+@media (min-width: 1450px){
+  .cont-testimoniales .tarjetas {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5vw;
+    max-height: 600px;
+  }
 }
 
 .cont-testimoniales .tarjeta {
@@ -111,7 +126,6 @@
   background-color: #ebebeb;
   border-radius: 2rem;
   box-shadow: 1px 1px 3px #000000;
-  
 }
 
 .cont-testimoniales .titulo{

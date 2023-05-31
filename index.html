@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
         <link rel="stylesheet" href="./styles/reset.css">
         <link rel="stylesheet" href="./styles/styles.css">
         <link rel="stylesheet" href="./styles/styles-home.css">
@@ -10,6 +11,9 @@
         <link rel="stylesheet" href="./styles/styles-alojamiento.css">
         <link rel="stylesheet" href="./styles/styles-contacto.css">
         <link rel="stylesheet" href="./styles/styles-carrousel-vids.css">
+        <link rel="stylesheet" href="./styles/responsive.css">
+        
+        
         <link rel="shortcut icon" href="./img/favicon.ico">
         <title>Devrel</title>
     </head>
@@ -18,31 +22,31 @@
         
         <main class="main">
 
-            <div class="fondo">
-                <img src="./img/image-1.png" alt="">
-            </div>
+            <div class="fondo"></div>
 
             <section class="home" id="home">
                 <h2 class="tag">Un viaje de mil millas comienza con un solo paso.</h2>
-                <section class="check-in-section">
+                <form class="check-in-section">
                     <div class="check-in-container">
-                        <div>
-                            <label for="check-in">CHECK IN</label>
+                        <div class="cont-input">
+                            <label for="check-in" class="label-tag">CHECK IN</label>
                             <input type="date" id="check-in" name="check-in" class="date-input">
                         </div>
-                        <div>
-                            <label for="check-out">CHECK OUT</label>
+                        <div class="cont-input">
+                            <label for="check-out" class="label-tag">CHECK OUT</label>
                             <input type="date" id="check-out" name="check-out" class="date-input">
                         </div>
-                        <div>
-                            <label for="personas">PERSONAS</label>
-                            <input type="text" id="personas" class="personas" name="personas" min="1" max="10" value="1" readonly>
-                            <img src="./img/plus.svg" alt="" class="btn-check" id="sumar">
-                            <img src="./img/minus.svg" alt="" class="btn-check" id="restar">
+                        <div class="cont-input">
+                            <label for="personas" class="label-tag">PERSONAS</label>
+                            <div class="cont-input-persona">
+                                <input type="text" id="personas" class="cant-personas" name="personas" min="1" max="10" value="1" readonly>
+                                <img src="./img/plus.svg" alt="" class="btn-check" id="sumar">
+                                <img src="./img/minus.svg" alt="" class="btn-check" id="restar">
+                            </div>
                         </div>
                     </div>
-                    <button class="btn-buscar">BUSCAR</button>
-                </section>
+                    <button type="submit" class="btn-buscar">BUSCAR</button>
+                </form>
             </section>
 
             <section class="cont-nosotros" id="nosotros">
@@ -292,9 +296,9 @@
                 <div class="footer-section">
                     <h3>Síguenos en redes sociales</h3>
                     <div class="social-media-icons">
-                        <a href=""><img src="./img/facebook.png" alt="" width="25px"><i class="facebook"></i></a>
-                        <a href=""><img src="./img/twitter.png" alt="" width="25px"><i class="twitter"></i></a>
-                        <a href=""><img src="./img/instagram.png" alt="" width="25px"><i class="instagram"></i></a>
+                        <a href=""><img src="./img/facebook.png" alt=""><i class="facebook"></i></a>
+                        <a href=""><img src="./img/twitter.png" alt=""><i class="twitter"></i></a>
+                        <a href=""><img src="./img/instagram.png" alt=""><i class="instagram"></i></a>
                     </div>
                 </div>
             </div>

@@ -1,62 +1,77 @@
 .home {
     display: flex;
-    min-height: 100vh;
+    width: 100%;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    padding: 150px 0 50px;
 }
 
 .home .tag {
     width: 50%;
     text-align: center;
     padding: 40px;
-    font-size: 5rem;
+    font-size: 5.3vw;
     color: #FE5303;
     font-family: serif;
     text-shadow: 4px 4px 5px #000000;
+    margin: 0;
+    position: absolute;
+    transform: translateY(25vh);
 }
 
 .home .check-in-section{
     display: flex;
+    position: absolute;
+    height: 5vw;
+    transform: translateY(85vh);
 }
 
 .home .check-in-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 620px;
-    border-radius: 20px;
+    width: 60vw;
+    border-radius: 2vw;
     background-color: #ffffff;
 }
 
-.home .check-in-container div {
-    padding: 10px 30px;
+.home .cont-input {
+    padding: 15px 30px;
     margin-right: 20px;
+    text-align: center;
+    width: 30%;
+    box-sizing: border-box;
 }
 
-.home .check-in-container label {
+.home .label-tag {
     display: block;
-    font-size: x-small;
+    font-size: 0.8vw;
     font-weight: bold;
     color: #686868;
 }
 
-.home .check-in-container div input {
+.home .cont-input input {
     border: none;
     font-family: 'Montserrat';
+    font-size: 1.2vw;
     color: #252525;
-    margin-top: 10px;
+    margin-top: 15px;
     outline: none;
-    
 }
 
 .home .check-in-container input::-moz-selection {
   background-color: transparent;
 }
 
-.home .personas{
-   width: 15px;
+.home .cont-input-persona{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+}
+
+.home .cont-input-persona input{
+    width: 15%;
 }
 
 .home .date-input::-webkit-calendar-picker-indicator {
@@ -65,20 +80,20 @@
 
 
 .home .btn-check{
-    width: 25px;
-    height: 10px;
-    border: none;
-    border-radius: 6px;
+    width: 0.8vw;
+    margin-right: 30px;
+    margin-bottom: 7px;
 }
 
 .home .btn-buscar {
-    margin: 0 10px;
-    padding: 23px 30px;
+    margin-left: 15px;
+    padding: 1vw 2vw;
     border: none;
-    border-radius: 20px;
+    border-radius: 2vw;
     background-color: #FE5303;
     color: #ffffff;
     font-family: 'Montserrat';
+    font-size: 1.4vw;
     font-weight: bold;
     text-shadow: 0 1px 3px #000000;
 }

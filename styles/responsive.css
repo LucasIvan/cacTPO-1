@@ -1,0 +1,60 @@
+@media (max-width:850px) {}
+
+@media (max-width:560px) {
+    .home .tag {
+        width: 80%;
+        padding: 5px;
+        font-size: 13vw;
+        transform: translateY(13vh);
+    }
+
+    .home .check-in-section {
+        flex-direction: column;
+        width: 80%;
+        transform: translateY(50vh);
+    }
+
+    .home .check-in-container {
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+        width: 100%;
+        border-radius: 4vw;
+    }
+
+    .home .cont-input {
+        text-align: start;
+        width: 100%;
+    }
+
+    .home .label-tag {
+        display: block;
+        font-size: 3.5vw;
+    }
+
+    .home .cont-input input {
+        border: none;
+        width: 100%;
+        font-size: 4vw;
+        outline: none;
+    }
+
+    .home .date-input::-webkit-calendar-picker-indicator {
+        background-image: url('../img/calendar.svg');
+        font-size: 6vw;
+    }
+
+    .home .btn-check {
+        width: 4vw;
+        margin-right: 2.5vw;
+        margin-left: 8.5vw;
+    }
+
+    .home .btn-buscar {
+        margin-left: 0px;
+        margin-top: 2vh;
+        padding: 4vw 2vw;
+        border-radius: 4vw;
+        font-size: 4vw;
+    }
+}
