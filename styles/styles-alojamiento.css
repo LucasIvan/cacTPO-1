@@ -23,8 +23,12 @@
 
 .alojamiento{
   display: grid;
-  gap: 1vw 5vw;
+  gap: 0 3.5vw;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.alojamiento .img div:first-child{
+  height: 100%;
 }
 
 .alojamiento img{
@@ -51,7 +55,7 @@
 
 .alojamiento .descripcion{
   position: relative;
-  transform: translate(8%, -150%);
+  transform: translate(8%, -200%);
   color: #FFFFFF;
   text-shadow: 1px 1px 5px #000000;
 }

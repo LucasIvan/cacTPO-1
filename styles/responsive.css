@@ -1,6 +1,22 @@
 @media (max-width:850px) {}
 
 @media (max-width:560px) {
+
+    .home,
+    .cont-nosotros,
+    .cont-alojamiento,
+    .cont-testimoniales,
+    .cont-videos {
+        padding: 0 25px;
+        margin-bottom: 5vh;
+    }
+
+    h2 {
+        font-size: 4vw;
+        margin-bottom: 5vh;
+    }
+
+    /*HOME*/
     .home .tag {
         width: 80%;
         padding: 5px;
@@ -57,4 +73,100 @@
         border-radius: 4vw;
         font-size: 4vw;
     }
+
+    /*NOSOTROS*/
+
+    .nosotros {
+        flex-direction: column;
+    }
+
+    .columna1,
+    .columna2 {
+        display: flex;
+        width: 100%;
+    }
+
+    .columna2 {
+        flex-direction: column-reverse;
+    }
+
+    .columna1 h3 {
+        font-size: 10vw;
+        margin-bottom: 30px;
+    }
+
+    .columna1 p,
+    .columna2 p {
+        font-size: 3.8vw;
+        text-justify: auto;
+        line-height: 2;
+        margin: 8vw 0;
+    }
+
+    .columna1 img,
+    .columna2 img {
+        border-radius: 4vw;
+    }
+
+    /**ALOJAMIENTO*/
+
+    .encabezado-alojamiento h3,
+    .cont-testimoniales h3 {
+        font-size: 10vw;
+    }
+
+    .encabezado-alojamiento p a {
+        font-size: 3vw;
+    }
+
+    .alojamiento {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .alojamiento .img div:first-child {
+        height: 40vh;
+        width: 100%;
+    }
+
+    .alojamiento img {
+        height: 95%;
+        box-shadow: 3px 3px 10px #000000;
+        border-radius: 6vw;
+        z-index: -111;
+    }
+
+    .alojamiento div:first-child {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+
+    .alojamiento .descripcion {
+        transform: translate(6%, -180%);
+    }
+
+    .alojamiento .descripcion h5 {
+        font-size: 6.3vw;
+        margin-bottom: 2.5vw;
+    }
+
+    .alojamiento .descripcion .precio {
+        margin-right: 5px;
+        font-size: 5vw;
+    }
+
+    .alojamiento .descripcion .desc {
+        margin-right: 15px;
+        font-size: 3vw;
+    }
+
+    .cont-testimoniales .tarjetas {
+        grid-template-columns: repeat(1fr);
+        gap: 20vw;
+        max-height: 550px;
+        scale: 0.9;
+        padding: 2px;
+    }
+
+
 }
